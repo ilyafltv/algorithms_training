@@ -17,7 +17,6 @@ const wordCountFunction = (str) => {
 // wordCountFunction(" В этой строке 10 слов, несмотря на знаки и  ЛИШНИЕ  пробелы! ");
 // wordCountFunction("You can also use latin alphabet(6).");
 
-
 // Функция подсчёта прописных букв в строке
 
 const upperCaseCheckFunction = (str) => {
@@ -30,7 +29,6 @@ const upperCaseCheckFunction = (str) => {
 
 // upperCaseCheckFunction('Подсчет Прописных Букв В Строке(5)');
 // upperCaseCheckFunction(' AAABBBCCC(9)');
-
 
 // Функция удаления повторяющихся символов;
 
@@ -50,7 +48,6 @@ const deleteDuplicateFuntion = (str) => {
 // deleteDuplicateFuntion("aaabbbcccabcAAA");
 // deleteDuplicateFuntion("AaAaAa00bcDE11");
 
-
 // Функция поиска самого длинного слова(первого) и подсчета количества его символов
 
 const findTheLongestWord = (str) => {
@@ -67,7 +64,6 @@ const findTheLongestWord = (str) => {
 
 // findTheLongestWord('Один, Два, Три, Четыре');
 // findTheLongestWord('What is the longest word here?');
-
 
 // Функция поиска всех слов в строке, начинающихся с определенной буквы(любого регистра)
 
