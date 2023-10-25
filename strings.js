@@ -2,7 +2,7 @@
 
 // Для проверки работоспособности функций раскомментируйте вызов соответствующей функции и запустите файл
 
-// Функция подсчёта количества слов(без букв и символов) в строке 
+// 1. Функция подсчёта количества слов(без цифр, небуквенных символов и пробелов) в строке 
 
 const wordCountFunction = (str) => {
     let lastLetter, isLetter, wordsCount = 0;
@@ -11,44 +11,34 @@ const wordCountFunction = (str) => {
         isLetter = (str[i].match(/[А-Я,а-я,A-Z,a-z]/gi)) ? true : false;
         wordsCount = (!lastLetter && isLetter) ? ++wordsCount : wordsCount;
     }
-    console.log(`В строке ${wordsCount} слов`);
+    return wordsCount;
 }
 
-// wordCountFunction(" В этой строке 10 слов, несмотря на знаки и  ЛИШНИЕ  пробелы! ");
-// wordCountFunction("You can also use latin alphabet(6).");
+// console.log(`В строке ${wordCountFunction(" В этой строке 10 слов, несмотря на знаки и  ЛИШНИЕ  пробелы! ")} слов`);
+// console.log(`В строке ${wordCountFunction("You can also use latin alphabet(6).")} слов`);
 
-// Функция подсчёта прописных букв в строке
+// 2. Функция подсчёта прописных букв в строке
 
 const upperCaseCheckFunction = (str) => {
     let sum = 0;
-    for (let i = 0; i < str.length; i++) {
-        sum = (str[i] === str[i].toUpperCase() && str[i].match(/[А-Я,A-Z]/gi)) ? ++sum : sum;
-    }
-    console.log(`В строке ${sum} прописных букв`);
+    for (let i = 0; i < str.length; i++) sum = (str[i] === str[i].toUpperCase() && str[i].match(/[А-Я,A-Z]/gi)) ? ++sum : sum;
+    return sum;
 }
 
-// upperCaseCheckFunction('Подсчет Прописных Букв В Строке(5)');
-// upperCaseCheckFunction(' AAABBBCCC(9)');
+// console.log(upperCaseCheckFunction('Подсчет Прописных Букв В Строке(5)'));
+// console.log(upperCaseCheckFunction(' AAABBBCCC(9)'));
 
-// Функция удаления повторяющихся символов;
+// 3. Функция удаления повторяющихся символов;
 
 const deleteDuplicateFuntion = (str) => {
-    let chars = [], duplicateCount = 0;
-    for (let i = 0; i < str.length; i++) {
-        for (let char of chars) duplicateCount = (str[i] == char) ? ++duplicateCount : duplicateCount;
-        if (duplicateCount > 0) {
-            str = str.slice(0, i) + ' ' + str.slice(i + 1);
-            duplicateCount = 0;
-        } else chars.push(str[i]);
-    }
-    str = str.replace(/ /g, '');
-    console.log(`Обновленная строка: ${str}`);
+    const arr = str.split('');
+    return arr.filter((x, i) => arr.indexOf(x) === i);
 }
 
-// deleteDuplicateFuntion("aaabbbcccabcAAA");
-// deleteDuplicateFuntion("AaAaAa00bcDE11");
+// console.log(deleteDuplicateFuntion("aaabbbcccabcAAA"));
+// console.log(deleteDuplicateFuntion("AaAaAa00bcDE11"));
 
-// Функция поиска самого длинного слова(первого) и подсчета количества его символов
+// 4. Функция поиска самого длинного слова(первого) и подсчета количества его символов
 
 const findTheLongestWord = (str) => {
     let isLetter, word, longestWord = '', maxCount = 0, lettersCount = 0;
@@ -65,7 +55,7 @@ const findTheLongestWord = (str) => {
 // findTheLongestWord('Один, Два, Три, Четыре');
 // findTheLongestWord('What is the longest word here?');
 
-// Функция поиска всех слов в строке, начинающихся с определенной буквы(любого регистра)
+// 5. Функция поиска всех слов в строке, начинающихся с определенной буквы(любого регистра)
 
 const findWords = (str, x) => {
     let isLetter = false, lastLetter, wordX = '', wordXDetected;

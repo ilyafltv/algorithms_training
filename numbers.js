@@ -2,7 +2,7 @@
 
 // Для проверки работоспособности функций раскомментируйте вызов соответствующей функции и запустите файл
 
-// Функция подсчета суммы цифр целого числа
+// 1. Функция подсчета суммы цифр целого числа
 
 const sumOfNumbers = (num) => {
     let sum = 0;
@@ -10,12 +10,12 @@ const sumOfNumbers = (num) => {
         sum += num % 10;
         num = Math.floor(num / 10);
     }
-    console.log(sum);
+    return sum;
 }
-// sumOfNumbers(54321);
-// sumOfNumbers(101099);
+// console.log(sumOfNumbers(54321));
+// console.log(sumOfNumbers(101099));
 
-// Функция инверсии целого числа
+// 2. Функция инверсии целого числа
 
 const inverseNumber = (num) => {
     let inverseNumber = 0, factor = 1;
@@ -25,13 +25,13 @@ const inverseNumber = (num) => {
         num = Math.floor(num / 10);
     }
     while ((inverseNumber % 1) != 0) inverseNumber *= 10;
-    console.log(inverseNumber);
+    return (inverseNumber);
 }
 
-// inverseNumber(4321);
-// inverseNumber(56789);
+// console.log(inverseNumber(4321));
+// console.log(inverseNumber(56789));
 
-// Функция определения количества цифр в числе
+// 3. Функция определения количества цифр в числе
 
 const countNumber = (num) => {
     result = 0;
@@ -39,13 +39,13 @@ const countNumber = (num) => {
         result += 1;
         num = Math.floor(num / 10);
     }
-    console.log(result);
+    return result;
 }
 
-// countNumber(110);
-// countNumber(99999);
+// console.log(countNumber(110));
+// console.log(countNumber(99999));
 
-// Функция определения максимальной цифры числа
+// 4. Функция определения максимальной цифры числа
 
 const maxNumber = (num) => {
     max = 0;
@@ -53,13 +53,13 @@ const maxNumber = (num) => {
         max = max < (num % 10) ? max = num % 10 : max;
         num = Math.floor(num / 10);
     }
-    console.log(max);
+    return max;
 }
 
-// maxNumber(1534);
-// maxNumber(768194);
+// console.log(maxNumber(1534));
+// console.log(maxNumber(768194));
 
-// Функция определения минимальной цифры числа 
+// 5. Функция определения минимальной цифры числа 
 
 const minNumber = (num) => {
     min = num % 10;
@@ -67,8 +67,8 @@ const minNumber = (num) => {
         min = min < (num % 10) ? min : num % 10;
         num = Math.floor(num / 10);
     }
-    console.log(min);
+    return min;
 }
 
-// minNumber(1534);
-// minNumber(88923);
+// console.log(minNumber(1534));
+// console.log(minNumber(88923));

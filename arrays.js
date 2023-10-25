@@ -36,5 +36,5 @@ const findAverageOfUnvenNumbers = (arr) => {
     return Uneven.reduce((a, x) => a += parseInt(x)) / Uneven.length;
 }
 
-console.log(findAverageOfUnvenNumbers([1, 2, 3, 4, 5]));
-console.log(findAverageOfUnvenNumbers([15, 12, 11, 41, 5]));
+// console.log(findAverageOfUnvenNumbers([1, 2, 3, 4, 5]));
+// console.log(findAverageOfUnvenNumbers([15, 12, 11, 41, 5]));
